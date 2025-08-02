@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe-Finder</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+     <header>
+  <div class="navbar">
+    <div class="logo">TastyTrack</div>
+    <div class="auth-icons">
+      <a href="#">Login</a>
+       <i class="fa-solid fa-circle-user" id="navbar-icon"></i>
+    </div>
+  </div>
+
+</header>
+
+<p class="intro" data-aos="fade-right" data-aos-delay="200">Find recipes by your favorite ingredients!</p>
+  
+
+  <section class="search-section" data-aos="fade-up" data-aos-delay="200">
+    <input type="text" id="searchInput" placeholder="Search for a recipe..." />
+    <button id="search-Btn"><i class="fas fa-search"></i> Search</button>
+  </section>
+
+<div class="main-recipes-container">
+  <h1>Latest <span>Recipes</span> </h1>
+   <div id="recipes-container" class="grid-container"></div>
+  
+  </div>
+
+  <!-- Footer -->
+   <div class="footer" data-aos="fade-up" data-aos-delay="400">
+      <p>&copy; <span id="year"></span> Recipe Finder. All rights reserved.</p>
+   </div>
+
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
